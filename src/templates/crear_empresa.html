@@ -1,0 +1,196 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<main class="content">
+    <div class="container-fluid p-0">
+
+        <h1 class="h3 mb-3">Empresas</h1>
+        <div class="row">
+            <div class="col-12 col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Datos Empresa</h5>
+                        <h6 class="card-subtitle text-muted"></h6>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Nombre</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Nombre Comercial</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Giro</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">RUT</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Dirección</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" for="inputState">Región</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>-- Select --</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" for="inputState">Comuna</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>-- Select --</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Contacto Comercial</h5>
+                        <h6 class="card-subtitle text-muted"></h6>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Nombre</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Teléfono</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Correo</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="card-header">
+                                <h5 class="card-title">Contacto Técnico</h5>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Nombre Técnico</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Teléfono</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Correo</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <div class="col-sm-10 ml-sm-auto">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Empresas Registradas</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre Empresa</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">E-mail Comercial</th>
+                                <th scope="col">Fecha de Registro</th>
+                                <th scope="col">Usuarios Creados</th>
+                                <th scope="col">Operadoras Asignadas</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Falabella</td>
+                                <td>Rosas #7209, Santiago</td>
+                                <td>correo@falabella.cl</td>
+                                <td>12/08/2021</td>
+                                <td>20</td>
+                                <td>4</td>
+                                <td><span class="badge bg-success mb-1 mx-2">ACTIVA</span></td>
+                                <td class="table-action">
+                                    <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Banco Ripley</td>
+                                <td>Ahumada #100, Santiago</td>
+                                <td>correo@ripley.cl</td>
+                                <td>12/08/2021</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td><span class="badge bg-success mb-1 mx-2">ACTIVA</span></td>
+                                <td class="table-action">
+                                    <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                </td>                                        </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Coca-Cola</td>
+                                <td>Agustinas #550, Santiago</td>
+                                <td>correo@cocacola.cl</td>
+                                <td>12/08/2021</td>
+                                <td>30</td>
+                                <td>4</td>
+                                <td><span class="badge bg-secondary mb-1 mx-2">INACTIVO</span></td>
+                                <td class="table-action">
+                                    <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                </td>                                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</main>
+{% endblock %}

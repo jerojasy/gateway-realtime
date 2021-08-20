@@ -1,0 +1,198 @@
+{% extends "index.html" %}
+
+{% block content %}
+<main class="content">
+    <div class="container-fluid p-0">
+
+        <div class="row mb-2 mb-xl-3">
+            <div class="col-auto d-none d-sm-block">
+                <h3>Dashboard</h3>
+            </div>
+
+        </div>
+        <div class="row">
+            <!-- <div class="col-12 col-sm-6 col-xxl-3 d-flex">
+                <div class="card illustration flex-fill">
+                    <div class="card-body p-0 d-flex flex-fill">
+                        <div class="row g-0 w-100">
+                            <div class="col-6">
+                                <div class="illustration-text p-3 m-1">
+                                    <h4 class="illustration-text">Welcome Back, Chris!</h4>
+                                    <p class="mb-0">AppStack Dashboard</p>
+                                </div>
+                            </div>
+                            <div class="col-6 align-self-end text-end">
+                                <img src="img/illustrations/customer-support.png" alt="Customer Support" class="img-fluid illustration-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-12 col-sm-6 col-xxl-3 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-grow-1">
+                                <p class="mb-2">Empresas Activas</p>
+                                <h3 class="mb-2">50</h3>
+                            </div>
+                            <div class="d-inline-block ms-3">
+                                <div class="stat">
+                                    <i class="align-middle text-success" data-feather="activity"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-3 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-grow-1">
+                                <p class="mb-2">Operadoras Activas</p>
+                                <h3 class="mb-2">7</h3>
+                            </div>
+                            <div class="d-inline-block ms-3">
+                                <div class="stat">
+                                    <i class="align-middle text-danger" data-feather="globe"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-3 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-grow-1">
+                                <p class="mb-2">Mensajes Enviados HOY</p>
+                                <h3 class="mb-2">1.000</h3>
+                            </div>
+                            <div class="d-inline-block ms-3">
+                                <div class="stat">
+                                    <i class="align-middle text-info" data-feather="inbox"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-3 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-grow-1">
+                                <p class="mb-2">Usuarios Registrados</p>
+                                <h3 class="mb-2">200</h3>
+                            </div>
+                            <div class="d-inline-block ms-3">
+                                <div class="stat">
+                                    <i class="align-middle text-info" data-feather="users"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Otro contenido -->
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Mensajes por Operadora</h5>
+                        <!-- <h6 class="card-subtitle text-muted">Area charts are used to represent quantitative variations.</h6> -->
+                    </div>
+                    <div class="card-body">
+                        <div class="chart w-100">
+                            <div id="apexcharts-area"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Mensajes por Empresa</h5>
+
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="chart w-100">
+                            <div id="apexcharts-pie" style="max-width: 440px;margin:auto;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="{'static' , 'js/app.js'}"></script>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Area chart
+        var options = {
+            chart: {
+                height: 350,
+                type: "area",
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: "smooth"
+            },
+            series: [{
+                name: "Entel",
+                data: [31, 40, 28, 51, 42, 109, 100]
+            }, {
+                name: "Movistar",
+                data: [11, 32, 45, 32, 34, 52, 41]
+            }],
+            xaxis: {
+                type: "datetime",
+                categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00",
+                    "2018-09-19T06:30:00"
+                ],
+            },
+            tooltip: {
+                x: {
+                    format: "dd/MM/yy HH:mm"
+                },
+            }
+        }
+        var chart = new ApexCharts(
+            document.querySelector("#apexcharts-area"),
+            options
+        );
+        chart.render();
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Pie chart
+        var options = {
+            chart: {
+                height: 350,
+                type: "donut",
+            },
+            dataLabels: {
+                enabled: false
+            },
+            series: [44, 55, 13, 33],
+            labels: ["Falabella", "Ripley", "Coca-Cola", "Cencosud"]
+
+        }
+        var chart = new ApexCharts(
+            document.querySelector("#apexcharts-pie"),
+            options
+        );
+        chart.render();
+    });
+</script>
+
+{% endblock %}
