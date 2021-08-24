@@ -16,9 +16,17 @@ def dashboard():
 def crear_empresa():
     return render_template('crear_empresa.html')
 
+@app.route('/empresa_usuario')
+def empresa_usuario():
+    return render_template('empresa_usuario.html')
+
 @app.route('/crear_operadora')
 def crear_operadora():
     return render_template('crear_operadora.html')
+
+@app.route('/realtime_usuarios')
+def realtime_usuarios():
+    return render_template('realtime_usuarios.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5001, debug=True)

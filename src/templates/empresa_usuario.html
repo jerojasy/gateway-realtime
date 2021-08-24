@@ -1,0 +1,418 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="content">
+    <div class="container-fluid p-0">
+
+        <h1 class="h3 mb-3">Empresa: Coca-Cola</h1>
+        <div class="row">
+            <div class="col-12 col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Datos Empresa</h5>
+                        <h6 class="card-subtitle text-muted"></h6>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Nombre</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="Coca-Cola">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Nombre Comercial</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="The Coca-Cola Company">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Giro</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="Bebidas">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">RUT</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="76.855.555-k">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Dirección</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="rosas">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" for="inputState">Región</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>-- Select --</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" for="inputState">Comuna</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>-- Select --</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                    <div class="mb-3 row mx-2">
+                        <div class="col-sm-10 ml-sm-auto">
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-12 col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Contacto Comercial</h5>
+                        <h6 class="card-subtitle text-muted"></h6>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Nombre</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="Juan Perez">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Teléfono</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="988396150">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Correo</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="juan@tecnicococacola.cl">
+                                </div>
+                            </div>
+                            <div class="card-header">
+                                <h5 class="card-title">Contacto Técnico</h5>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Nombre Técnico</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Teléfono</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Correo</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div> -->
+            <div class="mb-3 row">
+                <div class="col-sm-10 ml-sm-auto">
+                    <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
+                        data-bs-target="#modalCrearArea">+ Crear Área Empresa</button>
+                    <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
+                        data-bs-target="#modalCrearPerfil">+ Crear Perfil Empresa</button>
+                    <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
+                        data-bs-target="#modalCrearUsuario">+ Crear Usuario Empresa</button>
+                </div>
+            </div>
+            <!-- modal crear perfil -->
+            <div class="modal fade" id="modalCrearPerfil" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Crear Perfil</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body m-3">
+                            <form>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Nombre Perfil</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Descripción</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" name="descripcion-text"></textarea>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Permisos:</h5>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="table-responsive">
+                                                <table class="table mb-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Monitoreo</th>
+                                                            <th scope="col">Reportes</th>
+                                                            <th scope="col">Campañas</th>
+                                                            <th scope="col">Dashboard</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="flexSwitchCheckChecked" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="flexSwitchCheckChecked">Ver</label>
+                                                                </div>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="flexSwitchCheckChecked" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="flexSwitchCheckChecked">Modificar</label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="flexSwitchCheckChecked" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="flexSwitchCheckChecked">Ver</label>
+                                                                </div>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="flexSwitchCheckChecked" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="flexSwitchCheckChecked">Modificar</label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="flexSwitchCheckChecked" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="flexSwitchCheckChecked">Ver</label>
+                                                                </div>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="flexSwitchCheckChecked" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="flexSwitchCheckChecked">Modificar</label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="flexSwitchCheckChecked" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="flexSwitchCheckChecked">Ver</label>
+                                                                </div>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="flexSwitchCheckChecked" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="flexSwitchCheckChecked">Modificar</label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- endmodal crear perfil-->
+            <!-- modal crear area -->
+            <div class="modal fade" id="modalCrearArea" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Crear Área</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body m-3">
+                            <form>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Nombre</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Descripción</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" name="descripcion-text"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal crear area -->
+            <!-- modal crear Usuario -->
+            <div class="modal fade" id="modalCrearUsuario" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Crear Usuario Empresa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body m-3">
+                            <form>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Nombre Empresa</label>
+                                    <div class="col-sm-10">
+                                        <label class="col-form-label col-sm-2 text-sm-right">Coca-Cola</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">RUT Usuario</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Nombre y Apellido</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">E-Mail</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Teléfono</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Área</label>
+                                    <div class="col-sm-10">
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Seleccione Área</option>
+                                            <option>Marketing</option>
+                                            <option>Soporte</option>
+                                            <option>Operaciones</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Fecha Nacimiento</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" placeholder="dd/mm/aaaa">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-form-label col-sm-2 text-sm-right">Perfil</label>
+                                    <div class="col-sm-10">
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Seleccione Perfil</option>
+                                            <option>Marketing Campaña</option>
+                                            <option>Marketing Reporte</option>
+                                            <option>. . .</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal crear usuario -->
+
+        </div>
+
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Usuarios Registrados</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Fecha de Registro</th>
+                                <th scope="col">RUT</th>
+                                <th scope="col">Área</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Ricardo</td>
+                                <td>Soto</td>
+                                <td>correo@xcxc.cl</td>
+                                <td>12/08/2021</td>
+                                <td>20.000.000-5</td>
+                                <td>Marketing</td>
+                                <td><span class="badge bg-success mb-1 mx-2">ACTIVA</span></td>
+                                <td class="table-action">
+                                    <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Pedro</td>
+                                <td>Ahumada</td>
+                                <td>correo@sss.cl</td>
+                                <td>12/08/2021</td>
+                                <td>5.000.000-5</td>
+                                <td>Soporte</td>
+                                <td><span class="badge bg-success mb-1 mx-2">ACTIVA</span></td>
+                                <td class="table-action">
+                                    <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</main>
+{% endblock %}

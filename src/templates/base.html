@@ -25,14 +25,14 @@
   data-sidebar-behavior: sticky (default), fixed, compact
 -->
 
-<body data-theme="colored" data-layout="fluid" data-sidebar-position="left" data-sidebar-behavior="sticky">
+<body data-theme="light" data-layout="fluid" data-sidebar-position="left" data-sidebar-behavior="sticky">
     <div class="wrapper">
         <nav id="sidebar" class="sidebar">
             <div class="sidebar-content js-simplebar">
                 <a class="sidebar-brand" href="{{ url_for('dashboard') }}">
-                    <img src="{{ url_for('static', filename='img/brands/Naranja RT Blanco.png') }}" alt="logo" width="50px">
+                    <img src="{{ url_for('static', filename='img/brands/Logo Completo RT Transparente.png') }}" alt="logo" width="70px">
 
-                    <span class="align-middle me-3">RealTime</span>
+                    <!-- <span class="align-middle me-3">RealTime</span> -->
                 </a>
 
                 <ul class="sidebar-nav">
@@ -54,7 +54,7 @@
                         <ul id="administracion" class="sidebar-dropdown list-unstyled collapse "
                             data-bs-parent="#sidebar">
                             <li class="sidebar-item"><a class="sidebar-link" href="{{ url_for('crear_empresa') }}">Empresas</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="#">Usuarios</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="{{ url_for('realtime_usuarios') }}">Usuarios RealTime</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="{{ url_for('crear_operadora') }}">Operadoras</a>
                             </li>
                         </ul>
@@ -117,7 +117,7 @@
                             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
                                 data-bs-toggle="dropdown">
                                 <img src="{{ url_for('static', filename='img/avatars/avatar.jpg') }}" class="avatar img-fluid rounded-circle me-1"
-                                    alt="Chris Wood" /> <span class="text-dark">Usuario</span>
+                                    alt="Chris Wood" /> <span class="text-dark">Usuario RealTime</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1"
