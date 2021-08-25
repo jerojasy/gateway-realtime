@@ -28,5 +28,9 @@ def crear_operadora():
 def realtime_usuarios():
     return render_template('realtime_usuarios.html')
 
+@app.route('/campañas')
+def campañas():
+    return render_template('campañas.html')
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5001, debug=True)

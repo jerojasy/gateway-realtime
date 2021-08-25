@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="content">
+    <div class="container-fluid p-0">
+
+        <h1 class="h3 mb-3">Campañas</h1>
+        <div class="row">
+            <div class="col-12 col-xl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Datos Generales</h5>
+                        <h6 class="card-subtitle text-muted"></h6>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" for="inputState">Empresa</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>-- Seleccione --</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" for="inputState">Área</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>-- Seleccione --</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Nombre Campaña</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Detalle</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" name="descripcion-text"></textarea>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Prioridad Campaña</label>
+                                <div class="col-sm-10 mt-1">
+                                    <div>
+                                        <label class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inline-radios-example"
+                                                value="option1">
+                                            <span class="form-check-label">
+                                                Alta
+                                            </span>
+                                        </label>
+                                        <label class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inline-radios-example"
+                                                value="option2">
+                                            <span class="form-check-label">
+                                                Baja
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            <!-- </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Cantidad de SMS</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div> -->
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Fecha de Envío Campaña</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" placeholder="">
+                                </div>
+                                <div>
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Envío inmediato
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3 my-5 row">
+                                <h5 class="card-title">Opción de Contenido</h5>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-form-label col-sm-2 text-sm-right">Texto SMS</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" name="descripcion-text"
+                                        placeholder="Bienvenido a ..."></textarea>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="form-label col-form-label col-sm-2 text-sm-right">Cargar Archivo
+                                    CSV</label>
+                                <div class="col-sm-10">
+                                    <input type="file">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                    <span class="form-check-label">
+                                        Texto SMS incluido en CSV
+                                    </span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mb-3 row mx-2">
+                        <div class="col-sm-10 ml-sm-auto">
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</main>
+{% endblock %}
