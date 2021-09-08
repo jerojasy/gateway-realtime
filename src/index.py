@@ -32,5 +32,11 @@ def realtime_usuarios():
 def campañas():
     return render_template('campañas.html')
 
+
+
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5001, debug=True)

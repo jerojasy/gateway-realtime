@@ -30,7 +30,8 @@
         <nav id="sidebar" class="sidebar">
             <div class="sidebar-content js-simplebar">
                 <a class="sidebar-brand" href="{{ url_for('dashboard') }}">
-                    <img src="{{ url_for('static', filename='img/brands/Logo Completo RT Transparente.png') }}" alt="logo" width="70px">
+                    <img src="{{ url_for('static', filename='img/brands/Logo Completo RT Transparente.png') }}"
+                        alt="logo" width="70px">
 
                     <!-- <span class="align-middle me-3">RealTime</span> -->
                 </a>
@@ -39,12 +40,48 @@
                     <li class="sidebar-header">
                         Menú
                     </li>
-                    <li class="sidebar-item active">
-                        <a data-bs-target="#dashboards" data-bs-toggle="" class="sidebar-link" href="{{ url_for('dashboard') }}">
+                    <li class="sidebar-item">
+                        <a data-bs-target="#dashboards" data-bs-toggle="" class="sidebar-link"
+                            href="{{ url_for('dashboard') }}">
                             <i class="align-middle" data-feather="sliders"></i> <span
                                 class="align-middle">Dashboard</span>
                         </a>
 
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#monitoreo" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="activity"></i> <span
+                                class="align-middle">Monitoreo</span>
+                        </a>
+                        <ul id="monitoreo" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Conectores Operadora</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Campañas Activas</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Cuentas Activas</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Solicitudes de Campañas</a></li>
+                            <!-- <li class="sidebar-item"><a class="sidebar-link"
+                                    href="{{ url_for('crear_empresa') }}">Empresas</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link"
+                                    href="{{ url_for('realtime_usuarios') }}">Usuarios RealTime</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link"
+                                    href="{{ url_for('crear_operadora') }}">Operadoras</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#estadisticas" data-bs-toggle="" class="sidebar-link" href="#">
+                            <i class="align-middle" data-feather="trending-up"></i> <span
+                                class="align-middle">Estadisticas</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#reportes" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="pie-chart"></i> <span
+                                class="align-middle">Reportes</span>
+                        </a>
+                        <ul id="reportes" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Consolidado Operadora</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Consolidado Empresa</a></li>
+                        </ul>
                     </li>
                     <li class="sidebar-item">
                         <a data-bs-target="#administracion" data-bs-toggle="collapse" class="sidebar-link collapsed">
@@ -53,41 +90,64 @@
                         </a>
                         <ul id="administracion" class="sidebar-dropdown list-unstyled collapse "
                             data-bs-parent="#sidebar">
-                            <li class="sidebar-item"><a class="sidebar-link" href="{{ url_for('crear_empresa') }}">Empresas</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="{{ url_for('realtime_usuarios') }}">Usuarios RealTime</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="{{ url_for('crear_operadora') }}">Operadoras</a>
-                            </li>
+                            <li class="sidebar-item"><a class="sidebar-link"
+                                    href="{{ url_for('crear_empresa') }}">Empresas</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item">
                         <a data-bs-target="#campañas" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                            <i class="align-middle" data-feather="volume"></i> <span
+                            <i class="align-middle" data-feather="message-square"></i> <span
                                 class="align-middle">Campañas</span>
                         </a>
                         <ul id="campañas" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                            <li class="sidebar-item"><a class="sidebar-link" href="{{ url_for('campañas') }}">Campañas</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link"
+                                    href="{{ url_for('campañas') }}">Campañas</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Aprobación de Campañas</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a data-bs-target="#reportes" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                            <i class="align-middle" data-feather="trending-up"></i> <span
-                                class="align-middle">Reportes</span>
+                        <a data-bs-target="#mensajeria" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="send"></i> <span
+                                class="align-middle">Mensajería</span>
                         </a>
-                        <ul id="reportes" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                            <li class="sidebar-item"><a class="sidebar-link" href="#">Empresas</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="#">Mensajería</a></li>
+                        <ul id="mensajeria" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Envío de SMS</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a data-bs-target="#monitoreo" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                        <a data-bs-target="#webservices" data-bs-toggle="collapse" class="sidebar-link collapsed">
                             <i class="align-middle" data-feather="monitor"></i> <span
-                                class="align-middle">Monitoreo</span>
+                                class="align-middle">WebServices</span>
                         </a>
-                        <ul id="monitoreo" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                            <li class="sidebar-item"><a class="sidebar-link" href="#">GW SMPP</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="#">Mensajería</a></li>
+                        <ul id="webservices" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Documentación</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">API</a></li>
                         </ul>
                     </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#configuracion" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="settings"></i> <span
+                                class="align-middle">Configuración</span>
+                        </a>
+                        <ul id="configuracion" class="sidebar-dropdown list-unstyled collapse">
+                            <li class="sidebar-item"><a class="sidebar-link" href="{{ url_for('realtime_usuarios') }}">Usuarios</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Perfiles</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Áreas</a></li>
+                            <li class="sidebar-item">
+                                <a data-bs-target="#multi-3-1" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                                    Conectores
+                                </a>
+                                <ul id="multi-3-1" class="sidebar-dropdown list-unstyled collapse">
+                                    <li class="sidebar-item">
+                                    <li class="sidebar-item"><a class="sidebar-link"
+                                            href="{{ url_for('crear_operadora') }}">SMPP</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link" href="#">HTTP</a></li>
+                                    <li class="sidebar-item"><a class="sidebar-link" href="#">WhatsApp</a></li>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
                 </ul>
             </div>
         </nav>
@@ -116,12 +176,13 @@
 
                             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
                                 data-bs-toggle="dropdown">
-                                <img src="{{ url_for('static', filename='img/avatars/avatar.jpg') }}" class="avatar img-fluid rounded-circle me-1"
-                                    alt="Chris Wood" /> <span class="text-dark">Usuario</span>
+                                <img src="{{ url_for('static', filename='img/avatars/avatar.jpg') }}"
+                                    class="avatar img-fluid rounded-circle me-1" alt="Chris Wood" /> <span
+                                    class="text-dark">Usuario</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#"><i class="align-middle me-1"
-                                        data-feather="user"></i> Perfil</a>
+                                <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="user"></i>
+                                    Perfil</a>
                                 <!-- <a class="dropdown-item" href="#"><i class="align-middle me-1"
                                         data-feather="pie-chart"></i> Analytics</a>
                                 <div class="dropdown-divider"></div>

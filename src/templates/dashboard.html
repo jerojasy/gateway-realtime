@@ -99,15 +99,13 @@
         </div>
         <!-- Otro contenido -->
         <div class="row">
+            
             <div class="col-12 col-lg-6">
                 <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Mensajes por Operadora</h5>
-                        <!-- <h6 class="card-subtitle text-muted">Area charts are used to represent quantitative variations.</h6> -->
-                    </div>
-                    <div class="card-body">
+                   
+                    <div class="card-body text-center">
                         <div class="chart w-100">
-                            <div id="apexcharts-area"></div>
+                            <div id="chart" ></div>
                         </div>
                     </div>
                 </div>
@@ -121,6 +119,19 @@
                     <div class="card-body text-center">
                         <div class="chart w-100">
                             <div id="apexcharts-pie" style="max-width: 440px;margin:auto;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Mensajes en Tiempo Real</h5>
+                        <!-- <h6 class="card-subtitle text-muted">Area charts are used to represent quantitative variations.</h6> -->
+                    </div>
+                    <div class="card-body">
+                        <div class="chart w-100">
+                            <div id="apexcharts-area"></div>
                         </div>
                     </div>
                 </div>
@@ -193,6 +204,86 @@
         );
         chart.render();
     });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var options = {
+          series: [
+          {
+            name: "Movistar",
+            data: [28, 29, 33, 36, 32, 32, 33]
+          },
+          {
+            name: "Entel",
+            data: [12, 11, 14, 18, 17, 13, 13]
+          },
+          {
+            name: "WOM",
+            data: [20, 19, 25, 23, 22, 20, 18]
+          }
+        ],
+          chart: {
+          height: 350,
+          type: 'line',
+          dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+          },
+          toolbar: {
+            show: false
+          }
+        },
+        colors: ['#019DF4', '#002EFF', '#6F1A7E'],
+        dataLabels: {
+          enabled: true,
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        title: {
+          text: 'Transacción Mensual por Operadora',
+          align: 'left'
+        },
+        grid: {
+          borderColor: '#e7e7e7',
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        markers: {
+          size: 1
+        },
+        xaxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+          title: {
+            text: 'Meses'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Mensajes'
+          },
+          min: 5,
+          max: 40
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          floating: true,
+          offsetY: -25,
+          offsetX: -5
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    });
+      
 </script>
 
 {% endblock %}
