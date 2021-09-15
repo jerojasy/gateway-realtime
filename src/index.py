@@ -32,7 +32,9 @@ def realtime_usuarios():
 def campañas():
     return render_template('campañas.html')
 
-
+@app.route('/campañas_vista_empresa')
+def campañas_vista_empresa():
+    return render_template('campañas_vista_empresa.html')
 
 @app.route('/test')
 def test():
