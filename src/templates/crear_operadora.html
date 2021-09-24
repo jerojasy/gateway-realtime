@@ -4,158 +4,97 @@
     <div class="container-fluid p-0">
 
         <h1 class="h3 mb-3">Operadoras</h1>
-        <div class="row">
-            <div class="col-12 col-xl-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Registrar Operadora</h5>
-                        <h6 class="card-subtitle text-muted">Datos Operadora</h6>
+        <!-- BEGIN primary modal -->
+        <button type="button" class="btn btn-primary my-1 mb-3" data-bs-toggle="modal" data-bs-target="#defaultModalPrimary">
+            Registrar Operadora
+        </button>
+        <br>
+        <div class="modal fade" id="defaultModalPrimary" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="mb-3 row">
-                                <label class="col-form-label col-sm-2 text-sm-right">Nombre</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
+                    <div class="modal-body m-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Registrar Operadora</h5>
+                                <h6 class="card-subtitle text-muted">Datos Operadora</h6>
                             </div>
-                            <div class="mb-3 row">
-                                <label class="col-form-label col-sm-2 text-sm-right">Nombre Comercial</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-right">Nombre</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-right">Nombre Comercial</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-right">Giro</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-right">RUT</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-right">Contacto Técnico</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label class="col-form-label col-sm-2 text-sm-right">Dirección</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label" for="inputState">Región</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected>-- Select --</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label class="form-label" for="inputState">Comuna</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected>-- Select --</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+        
+                                    <!-- <div class="mb-3 row">
+                                        <div class="col-sm-10 ml-sm-auto">
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div> -->
+                                </form>
                             </div>
-                            <div class="mb-3 row">
-                                <label class="col-form-label col-sm-2 text-sm-right">Giro</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label class="col-form-label col-sm-2 text-sm-right">RUT</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label class="col-form-label col-sm-2 text-sm-right">Contacto Técnico</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label class="col-form-label col-sm-2 text-sm-right">Dirección</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="mb-3 col-md-6">
-                                    <label class="form-label" for="inputState">Región</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>-- Select --</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3 col-md-6">
-                                    <label class="form-label" for="inputState">Comuna</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>-- Select --</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                            </div>
-                        
-                            <div class="mb-3 row">
-                                <div class="col-sm-10 ml-sm-auto">
-                                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                                </div>
-                            </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-12 col-xl-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Configuración SMPP</h5>
-                        <!-- <h6 class="card-subtitle text-muted">Default Bootstrap form layout.</h6> -->
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="row">
-                                <div class="mb-3 col-md-8">
-                                    <label class="form-label" for="inputEmail4">Connection</label>
-                                    <input type="email" class="form-control" id="inputEmail4"
-                                        placeholder="127.0.0.121">
-                                </div>
-                                <div class="mb-3 col-md-4">
-                                    <label class="form-label" for="inputPassword4">Port</label>
-                                    <input type="password" class="form-control" id="inputPassword4"
-                                        placeholder="3775">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="mb-3 col-md-7">
-                                    <label class="form-label" for="inputEmail4">Authorization</label>
-                                    <input type="email" class="form-control" id="inputEmail4"
-                                        placeholder="user">
-                                </div>
-                                <div class="mb-3 col-md-5">
-                                    <label class="form-label" for="inputPassword4">&nbsp;</label>
-                                    <input type="password" class="form-control" id="inputPassword4"
-                                        placeholder="pass">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="inputState">Bind type</label>
-                                <select id="inputState" class="form-control">
-                                    <option selected>-- Select --</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">System Type</label>
-                                <input type="email" class="form-control" placeholder="System Type">
-                            </div>
-                            <div class="row">
-                                <div class="mb-3 col-md-4">
-                                    <label class="form-label" for="inputEmail4">SMS per second</label>
-                                    <input type="email" class="form-control" id="inputEmail4"
-                                        placeholder="100">
-                                </div>
-                            </div>
-                            <!-- <div class="row">
-                                <div class="mb-3 col-md-4">
-                                    <label class="form-label" for="inputEmail4">Enquired Link</label>
-                                    <input type="email" class="form-control" id="inputEmail4"
-                                        placeholder="120">
-                                </div>
-                                <div class="mb-3 col-md-4">
-                                    <label class="form-label" for="inputPassword4">Repeat</label>
-                                    <input type="password" class="form-control" id="inputPassword4"
-                                        placeholder="60">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="mb-3 col-md-4">
-                                    <label class="form-label" for="inputEmail4">Bind Timeout</label>
-                                    <input type="email" class="form-control" id="inputEmail4"
-                                        placeholder="15">
-                                </div>
-                                <div class="mb-3 col-md-4">
-                                    <label class="form-label" for="inputPassword4">Response
-                                        Timeout</label>
-                                    <input type="password" class="form-control" id="inputPassword4"
-                                        placeholder="30">
-                                </div>
-                            </div> -->
-                            <button type="submit" class="btn btn-primary">Save</button>
-                        </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- END primary modal -->
+
 
         <div class="col-12">
             <div class="card">
@@ -180,6 +119,20 @@
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
+                                <td><a href="{{ url_for('configurar_operadora') }}">Netline</a></td>
+                                <td>Los Conquistadores 2430, Providencia</td>
+                                <td>correo@netline.cl</td>
+                                <td>12/08/2021</td>
+                                <td>técnico@Netline.cl / 988396150</td>
+                                <td>200.71.217.150</td>
+                                <td><span class="badge bg-success mb-1 mx-2">ACTIVA</span></td>
+                                <td class="table-action">
+                                    <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
                                 <td>Movistar</td>
                                 <td>Rosas #7209, Santiago</td>
                                 <td>correo@Movistar.cl</td>
@@ -193,7 +146,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
+                                <th scope="row">3</th>
                                 <td>Entel</td>
                                 <td>Ahumada #100, Santiago</td>
                                 <td>correo@Entel.cl</td>
@@ -204,9 +157,10 @@
                                 <td class="table-action">
                                     <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
                                     <a href="#"><i class="align-middle" data-feather="trash"></i></a>
-                                </td>                                        </tr>
+                                </td>
+                            </tr>
                             <tr>
-                                <th scope="row">3</th>
+                                <th scope="row">4</th>
                                 <td>WOM</td>
                                 <td>Agustinas #550, Santiago</td>
                                 <td>correo@WOM.cl</td>
@@ -217,7 +171,8 @@
                                 <td class="table-action">
                                     <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
                                     <a href="#"><i class="align-middle" data-feather="trash"></i></a>
-                                </td>                                        </tr>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

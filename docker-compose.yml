@@ -4,8 +4,8 @@ services:
     web:
         build: .
         ports:
-            - "5001:5001"
+            - "5001:8011"
         restart: always
         volumes: 
             - ./src:/src
-        command: python index.py
+            - .:/code

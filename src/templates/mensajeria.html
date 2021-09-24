@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="content">
+    <div class="container-fluid p-0">
+        <h1 class="h3 mb-3">Envío de SMS</h1>
+        <div class="row">
+            <form action="/mensajeria" method="POST">
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <h5 class="card-title mb-0">Configuración</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-2">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelectGrid" name="from"
+                                        aria-label="Floating label select example">
+                                        <option selected>Seleccione...</option>
+                                        <option value="56442170335">56442170335</option>
+                                    </select>
+                                    <label for="floatingSelectGrid">Desde</label>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="floatingInputGrid" name="to"
+                                        placeholder="Ingrese Número" value="">
+                                    <label for="floatingInputGrid">Para</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <label class="col-form-label col-sm-2 text-sm-right">Fecha de Envío:</label>
+                            <div class="col-sm-2">
+                                <div>
+                                    <label class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <span class="form-check-label">
+                                            Envío inmediato
+                                        </span>
+                                    </label>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Inmediato">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header pb-0">
+                        <h5 class="card-title mb-0">Mensaje:</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea1" name="text"
+                                style="height: 100px"></textarea>
+                            <label for="floatingTextarea1">Mensaje de texto</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 row mx-2">
+                        <div class="col-sm-10 ml-sm-auto">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for msg in messages %}
+                    <div class="alert alert-info alert-dismissible" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <div class="alert-message">
+                            <strong>{{msg}}</strong>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}    
+            {% endwith %} -->
+            {% if msg != "" %}
+                    <div class="alert alert-{{flag}} alert-dismissible" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <div class="alert-message">
+                            <strong>{{msg}}</strong>
+                        </div>
+                    </div>
+            {% endif %}    
+            
+        </div>
+    </div>
+</main>
+
+{% endblock %}

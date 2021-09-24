@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="content">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12 col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Configuración SMPP</h5>
+                        <!-- <h6 class="card-subtitle text-muted">Default Bootstrap form layout.</h6> -->
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="mb-3 col-md-8">
+                                    <label class="form-label" for="inputEmail4">Connection</label>
+                                    <input type="email" class="form-control" id="inputEmail4"
+                                        placeholder="200.71.217.150">
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label class="form-label" for="inputPassword4">Port</label>
+                                    <input type="password" class="form-control" id="inputPassword4" placeholder="2779">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col-md-7">
+                                    <label class="form-label" for="inputEmail4">Authorization</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="RealTime">
+                                </div>
+                                <div class="mb-3 col-md-5">
+                                    <label class="form-label" for="inputPassword4">&nbsp;</label>
+                                    <input type="password" class="form-control" id="inputPassword4"
+                                        placeholder="Y8zCOw">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="inputState">Bind type</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>-- Select --</option>
+                                    <option>Transceiver</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">System Type</label>
+                                <input type="email" class="form-control" placeholder="System Type">
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col-md-4">
+                                    <label class="form-label" for="inputEmail4">SMS per second</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="100">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col-md-4">
+                                    <label class="form-label" for="inputEmail4">Cantidad de Conexiones</label>
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="100">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-actions float-end">
+                            <div class="dropdown show">
+                                <a href="#" data-bs-toggle="dropdown" data-bs-display="static">
+                                    <i class="align-middle" data-feather="more-horizontal"></i>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="card-title mb-0">Actividad</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-2" style="margin-top: 45px;">
+                                <button type="submit" class="btn btn-primary mb-1">Start</button>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Stop</button>
+                            </div>
+                            <div class="col">
+                                <table id="datatables-clients" class="table table-striped" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Command</th>
+                                            <th>Date</th>
+                                            <th>Result</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>START</td>
+                                            <td>20.09.2021</td>
+                                            <td><span class="badge bg-success">Done</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>STOP</td>
+                                            <td>20.09.2021</td>
+                                            <td><span class="badge bg-success">Done</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Contacto Técnico</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="mb-3 col-md-8">
+                                <label class="form-label" for="inputEmail4">Email</label>
+                                <input type="text" class="form-control" id="inputEmail4"
+                                    placeholder="tecnico@netline.cl">
+                            </div>
+                            <div class="mb-3 col-md-4">
+                                <label class="form-label" for="inputPassword4">Teléfono</label>
+                                <input type="text" class="form-control" id="inputPassword4" placeholder="978456123">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+{% endblock %}
