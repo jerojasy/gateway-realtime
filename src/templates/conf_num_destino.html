@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="modal fade" id="modalAddConf" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Configuración</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body m-3">
+                <form>
+                    <h6 class="card-subtitle text-muted">Rangos:</h6>
+                    <br>
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <label class="form-label">Desde</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label class="form-label">Hasta</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label" for="inputState">Operadora</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Seleccione...</option>
+                            <option>Movistar</option>
+                            <option>Entel</option>
+                            <option>Claro</option>
+                            <option>Netline</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<main class="content">
+    <div class="container-fluid p-0">
+        <div class="mb-3 row">
+            <div class="col-sm-10 ml-sm-auto">
+                <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
+                    data-bs-target="#modalAddConf">Agregar Configuración</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Números de Destino Configurados</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Empresa</th>
+                                <th scope="col">Rango</th>
+                                <th scope="col">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Netline</td>
+                                <td>2020-2050</td>
+                                <td class="table-action">
+                                    <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Movistar</td>
+                                <td>2030-2040</td>
+                                <td class="table-action">
+                                    <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Entel</td>
+                                <td>2060-2080</td>
+                                <td class="table-action">
+                                    <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+                                    <a href="#"><i class="align-middle" data-feather="trash"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
